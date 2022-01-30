@@ -1,6 +1,6 @@
 :root {
   --rotation-time: 2s;
-  --orbit-mode: var(--rotation-time) linear 0s infinite;
+  --orbit-mode: var(--rotation-time) linear 0s infinite forwards;
 }
 
 body {
