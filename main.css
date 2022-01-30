@@ -282,6 +282,7 @@ body {
 .e3 {
   -webkit-animation: e3-faceme var(--orbit-mode);
   animation: e3-faceme var(--orbit-mode);
+  bottom: 0;
 }
 
 @-webkit-keyframes orbit-3 {
