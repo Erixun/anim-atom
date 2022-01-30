@@ -46,7 +46,7 @@ body {
 
 .glowing {
   -webkit-animation: glowing 2s ease-out 2s infinite alternate;
-          animation: glowing 2s ease-out 2s infinite alternate;
+  animation: glowing 2s ease-out 2s infinite alternate;
 }
 
 @-webkit-keyframes glowing {
@@ -84,7 +84,7 @@ body {
   height: 35px;
   z-index: 532;
   -webkit-animation: expand 4s ease-out 0s 1 forwards;
-          animation: expand 4s ease-out 0s 1 forwards;
+  animation: expand 4s ease-out 0s 1 forwards;
 }
 
 @-webkit-keyframes expand {
@@ -160,7 +160,7 @@ body {
 
 .o1 {
   -webkit-animation: x-rotation var(--orbit-mode);
-          animation: x-rotation var(--orbit-mode);
+  animation: x-rotation var(--orbit-mode);
 }
 
 @-webkit-keyframes x-rotation {
@@ -170,6 +170,7 @@ body {
   }
 
   50% {
+    transform: rotate3d(1, 0, 0, 180deg);
     z-index: -1;
   }
 
@@ -186,6 +187,7 @@ body {
   }
 
   50% {
+    transform: rotate3d(1, 0, 0, 180deg);
     z-index: -1;
   }
 
@@ -197,12 +199,16 @@ body {
 
 .e1 {
   -webkit-animation: e1-faceme var(--orbit-mode);
-          animation: e1-faceme var(--orbit-mode);
+  animation: e1-faceme var(--orbit-mode);
 }
 
 @-webkit-keyframes e1-faceme {
   0% {
     transform: rotate3d(1, 0, 0, 0)
+  }
+
+  50% {
+    transform: rotate3d(1, 0, 0, -180deg)
   }
 
   100% {
@@ -215,6 +221,10 @@ body {
     transform: rotate3d(1, 0, 0, 0)
   }
 
+  50% {
+    transform: rotate3d(1, 0, 0, -180deg)
+  }
+
   100% {
     transform: rotate3d(1, 0, 0, -360deg)
   }
@@ -222,12 +232,16 @@ body {
 
 .o2 {
   -webkit-animation: z-rotation var(--orbit-mode);
-          animation: z-rotation var(--orbit-mode);
+  animation: z-rotation var(--orbit-mode);
 }
 
 @-webkit-keyframes z-rotation {
   0% {
     transform: rotate3d(0, 0, 1, 90deg);
+  }
+
+  50% {
+    transform: rotate3d(0, 0, 1, 270deg);
   }
 
   100% {
@@ -238,6 +252,10 @@ body {
 @keyframes z-rotation {
   0% {
     transform: rotate3d(0, 0, 1, 90deg);
+  }
+
+  50% {
+    transform: rotate3d(0, 0, 1, 270deg);
   }
 
   100% {
@@ -256,17 +274,21 @@ body {
 
 .o3 {
   -webkit-animation: orbit-3 var(--orbit-mode);
-          animation: orbit-3 var(--orbit-mode);
+  animation: orbit-3 var(--orbit-mode);
 }
 
 .e3 {
   -webkit-animation: e3-faceme var(--orbit-mode);
-          animation: e3-faceme var(--orbit-mode);
+  animation: e3-faceme var(--orbit-mode);
 }
 
 @-webkit-keyframes orbit-3 {
   0% {
     transform: rotate3d(-1, 0, 0.5, 45deg)
+  }
+
+  50% {
+    transform: rotate3d(-1, 0, 0.5, 225deg)
   }
 
   100% {
@@ -279,6 +301,10 @@ body {
     transform: rotate3d(-1, 0, 0.5, 45deg)
   }
 
+  50% {
+    transform: rotate3d(-1, 0, 0.5, 225deg)
+  }
+
   100% {
     transform: rotate3d(-1, 0, 0.5, 405deg)
   }
@@ -287,6 +313,10 @@ body {
 @-webkit-keyframes e3-faceme {
   0% {
     transform: rotate3d(1, 0, -0.5, 45deg);
+  }
+
+  50% {
+    transform: rotate3d(1, 0, -0.5, 225deg)
   }
 
   100% {
@@ -299,6 +329,10 @@ body {
     transform: rotate3d(1, 0, -0.5, 45deg);
   }
 
+  50% {
+    transform: rotate3d(1, 0, -0.5, 225deg)
+  }
+
   100% {
     transform: rotate3d(1, 0, -0.5, 405deg);
   }
@@ -308,12 +342,16 @@ body {
   align-items: center;
   justify-content: start;
   -webkit-animation: orbit-4 var(--orbit-mode);
-          animation: orbit-4 var(--orbit-mode);
+  animation: orbit-4 var(--orbit-mode);
 }
 
 @-webkit-keyframes orbit-4 {
   0% {
     transform: rotate3d(0, 1, 0.5, 0deg);
+  }
+
+  50% {
+    transform: rotate3d(0, 1, 0.5, 180deg);
   }
 
   100% {
@@ -326,6 +364,10 @@ body {
     transform: rotate3d(0, 1, 0.5, 0deg);
   }
 
+  50% {
+    transform: rotate3d(0, 1, 0.5, 180deg);
+  }
+
   100% {
     transform: rotate3d(0, 1, 0.5, 360deg);
   }
@@ -333,12 +375,16 @@ body {
 
 .e4 {
   -webkit-animation: e4-faceme var(--orbit-mode);
-          animation: e4-faceme var(--orbit-mode);
+  animation: e4-faceme var(--orbit-mode);
 }
 
 @-webkit-keyframes e4-faceme {
   0% {
     transform: rotate3d(0, -1, -0.5, 0deg);
+  }
+
+  50% {
+    transform: rotate3d(0, -1, -0.5, 180deg);
   }
 
   100% {
@@ -349,6 +395,10 @@ body {
 @keyframes e4-faceme {
   0% {
     transform: rotate3d(0, -1, -0.5, 0deg);
+  }
+
+  50% {
+    transform: rotate3d(0, -1, -0.5, 180deg);
   }
 
   100% {
