@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuclear</title>
+</head>
+
+<body>
+  <div class="atom" id="atom">
+    <button tabindex="0" class="nucleus normalized glowing" id="nucleus">
+    </button>
+    <div class="orbit o1">
+      <div class="electron e1"></div>
+    </div>
+    <div class="orbit o2">
+      <div class="electron e2"></div>
+      <div class="electron e2"></div>
+    </div>
+    <div class="orbit o3">
+      <div class="electron e3"></div>
+    </div>
+    <div class="orbit o4">
+      <div class="electron e4"></div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const nucleus = document.getElementById('nucleus');
+  const clickHandler = () => {
+    nucleus.style.pointerEvents = 'none';
+    nucleus.classList.toggle('normalized');
+    nucleus.classList.toggle('supernova')
+    nucleus.classList.toggle('glowing')
+    setTimeout(() => {
+      nucleus.classList.toggle('supernova');
+      setTimeout(() => {
+        nucleus.classList.toggle('normalized');
+        setTimeout(() => {
+          nucleus.classList.toggle('glowing')
+          nucleus.style.pointerEvents = 'auto';
+        }, 3000)
+      }, 300)
+    }, 4000)
+  }
+  nucleus.onclick = clickHandler;
+</script>
+
+<style>
+  :root {
+    --rotation-time: 2s;
+    --orbit-mode: var(--rotation-time) linear 0s infinite;
+  }
+
+  body {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+  }
+
+  .atom {
+    width: Min(500px, 100vw);
+    height: 500px;
+    outline: 1px solid;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    background: radial-gradient(rgb(131 96 0), black, transparent);
+  }
+
+  .nucleus {
+    all: unset;
+    width: 0px;
+    height: 0px;
+    outline: 1px solid #8080801f;
+    background: radial-gradient(#fff700, #fff947 10%, #ff5a28);
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 5px #ef3800);
+    cursor: pointer;
+  }
+
+  .normalized {
+    width: 35px;
+    height: 35px;
+    transition: width 2s 1s, height 2s 1s;
+  }
+
+  .glowing {
+    animation: glowing 2s ease-out 2s infinite alternate;
+  }
+
+  @keyframes glowing {
+    from {
+      filter: drop-shadow(0px 0px 5px #ef3800);
+      transform: scale(1);
+    }
+
+    to {
+      filter: drop-shadow(0px 0px 15px #f89f3a) brightness(1.2);
+      transform: scale(1.25);
+    }
+  }
+
+  .nucleus:is(.glowing):hover,
+  .nucleus:is(.glowing):focus {
+    box-shadow: 0px 0px 6px 6px white;
+    transition: box-shadow 1s;
+  }
+
+  .supernova {
+    width: 35px;
+    height: 35px;
+    z-index: 532;
+    animation: expand 4s ease-out 0s 1 forwards;
+  }
+
+  @keyframes expand {
+    0% {
+      transform: scale(1);
+    }
+
+    10% {
+      transform: scale(0.1);
+    }
+
+    20% {
+      transform: scale(80);
+      opacity: 1;
+    }
+
+    50% {
+      transform: scale(80);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: scale(80);
+      opacity: 0;
+    }
+  }
+
+  .orbit {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    outline: 1px solid;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    pointer-events: none;
+  }
+
+  .electron {
+    width: 5px;
+    height: 5px;
+    margin: -5px;
+    background: radial-gradient(rgb(230, 207, 173), rgb(255, 81, 0));
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .o1 {
+    animation: x-rotation var(--orbit-mode);
+  }
+
+  @keyframes x-rotation {
+    0% {
+      transform: rotate3d(1, 0, 0, 0);
+      z-index: -1;
+    }
+
+    50% {
+      z-index: -1;
+    }
+
+    100% {
+      transform: rotate3d(1, 0, 0, 360deg);
+      z-index: 1;
+    }
+  }
+
+  .e1 {
+    animation: e1-faceme var(--orbit-mode);
+  }
+
+  @keyframes e1-faceme {
+    0% {
+      transform: rotate3d(1, 0, 0, 0)
+    }
+
+    100% {
+      transform: rotate3d(1, 0, 0, -360deg)
+    }
+  }
+
+  .o2 {
+    animation: z-rotation var(--orbit-mode);
+  }
+
+  @keyframes z-rotation {
+    0% {
+      transform: rotate3d(0, 0, 1, 90deg);
+    }
+
+    100% {
+      transform: rotate3d(0, 0, 1, 450deg);
+    }
+  }
+
+
+  .e2:first-child {
+    bottom: 0;
+  }
+
+  .e2:last-child {
+    top: 0;
+  }
+
+  .o3 {
+    animation: orbit-3 var(--orbit-mode);
+  }
+
+  .e3 {
+    animation: e3-faceme var(--orbit-mode);
+  }
+
+  @keyframes orbit-3 {
+    0% {
+      transform: rotate3d(-1, 0, 0.5, 45deg)
+    }
+
+    100% {
+      transform: rotate3d(-1, 0, 0.5, 405deg)
+    }
+  }
+
+  @keyframes e3-faceme {
+    0% {
+      transform: rotate3d(1, 0, -0.5, 45deg);
+    }
+
+    100% {
+      transform: rotate3d(1, 0, -0.5, 405deg);
+    }
+  }
+
+  .o4 {
+    align-items: center;
+    justify-content: start;
+    animation: orbit-4 var(--orbit-mode);
+  }
+
+  @keyframes orbit-4 {
+    0% {
+      transform: rotate3d(0, 1, 0.5, 0deg);
+    }
+
+    100% {
+      transform: rotate3d(0, 1, 0.5, 360deg);
+    }
+  }
+
+  .e4 {
+    animation: e4-faceme var(--orbit-mode);
+  }
+
+  @keyframes e4-faceme {
+    0% {
+      transform: rotate3d(0, -1, -0.5, 0deg);
+    }
+
+    100% {
+      transform: rotate3d(0, -1, -0.5, 360deg);
+    }
+  }
+
+</style>
+
+</html>
