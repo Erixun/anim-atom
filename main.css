@@ -237,29 +237,29 @@ body {
 
 @-webkit-keyframes z-rotation {
   0% {
-    transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 0deg);
   }
 
   50% {
-    transform: rotate3d(0, 0, 1, 270deg);
+    transform: rotate3d(0, 0, 1, 180deg);
   }
 
   100% {
-    transform: rotate3d(0, 0, 1, 450deg);
+    transform: rotate3d(0, 0, 1, 360deg);
   }
 }
 
 @keyframes z-rotation {
   0% {
-    transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 0deg);
   }
 
   50% {
-    transform: rotate3d(0, 0, 1, 270deg);
+    transform: rotate3d(0, 0, 1, 180deg);
   }
 
   100% {
-    transform: rotate3d(0, 0, 1, 450deg);
+    transform: rotate3d(0, 0, 1, 360deg);
   }
 }
 
@@ -284,57 +284,57 @@ body {
 
 @-webkit-keyframes orbit-3 {
   0% {
-    transform: rotate3d(-1, 0, 0.5, 45deg)
+    transform: rotate3d(-1, 0, 0.5, 0deg)
   }
 
   50% {
-    transform: rotate3d(-1, 0, 0.5, 225deg)
+    transform: rotate3d(-1, 0, 0.5, 180deg)
   }
 
   100% {
-    transform: rotate3d(-1, 0, 0.5, 405deg)
+    transform: rotate3d(-1, 0, 0.5, 360deg)
   }
 }
 
 @keyframes orbit-3 {
   0% {
-    transform: rotate3d(-1, 0, 0.5, 45deg)
+    transform: rotate3d(-1, 0, 0.5, 0deg)
   }
 
   50% {
-    transform: rotate3d(-1, 0, 0.5, 225deg)
+    transform: rotate3d(-1, 0, 0.5, 180deg)
   }
 
   100% {
-    transform: rotate3d(-1, 0, 0.5, 405deg)
+    transform: rotate3d(-1, 0, 0.5, 360deg)
   }
 }
 
 @-webkit-keyframes e3-faceme {
   0% {
-    transform: rotate3d(1, 0, -0.5, 45deg);
+    transform: rotate3d(1, 0, -0.5, 0deg);
   }
 
   50% {
-    transform: rotate3d(1, 0, -0.5, 225deg)
+    transform: rotate3d(1, 0, -0.5, 180deg)
   }
 
   100% {
-    transform: rotate3d(1, 0, -0.5, 405deg);
+    transform: rotate3d(1, 0, -0.5, 360deg);
   }
 }
 
 @keyframes e3-faceme {
   0% {
-    transform: rotate3d(1, 0, -0.5, 45deg);
+    transform: rotate3d(1, 0, -0.5, 0deg);
   }
 
   50% {
-    transform: rotate3d(1, 0, -0.5, 225deg)
+    transform: rotate3d(1, 0, -0.5, 180deg)
   }
 
   100% {
-    transform: rotate3d(1, 0, -0.5, 405deg);
+    transform: rotate3d(1, 0, -0.5, 360deg);
   }
 }
 
