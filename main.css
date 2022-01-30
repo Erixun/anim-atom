@@ -17,7 +17,7 @@ body {
 
 .atom {
   width: Min(500px, 100vw);
-  height: 500px;
+  height: Min(500px, 100vw);
   outline: 1px solid;
   position: relative;
   display: flex;
@@ -286,57 +286,57 @@ body {
 
 @-webkit-keyframes orbit-3 {
   0% {
-    transform: rotate3d(-1, 0, 0.5, 30deg)
+    transform: rotate3d(-1, 0, 0.5, 0deg)
   }
 
   50% {
-    transform: rotate3d(-1, 0, 0.5, 210deg)
+    transform: rotate3d(-1, 0, 0.5, 180deg)
   }
 
   100% {
-    transform: rotate3d(-1, 0, 0.5, 390deg)
+    transform: rotate3d(-1, 0, 0.5, 359deg)
   }
 }
 
 @keyframes orbit-3 {
   0% {
-    transform: rotate3d(-1, 0, 0.5, 30deg)
+    transform: rotate3d(-1, 0, 0.5, 0deg)
   }
 
   50% {
-    transform: rotate3d(-1, 0, 0.5, 210deg)
+    transform: rotate3d(-1, 0, 0.5, 180deg)
   }
 
   100% {
-    transform: rotate3d(-1, 0, 0.5, 390deg)
+    transform: rotate3d(-1, 0, 0.5, 359deg)
   }
 }
 
 @-webkit-keyframes e3-faceme {
   0% {
-    transform: rotate3d(1, 0, -0.5, 30deg);
+    transform: rotate3d(1, 0, -0.5, 0deg);
   }
 
   50% {
-    transform: rotate3d(1, 0, -0.5, 210deg)
+    transform: rotate3d(1, 0, -0.5, 180deg)
   }
 
   100% {
-    transform: rotate3d(1, 0, -0.5, 390deg);
+    transform: rotate3d(1, 0, -0.5, 359deg);
   }
 }
 
 @keyframes e3-faceme {
   0% {
-    transform: rotate3d(1, 0, -0.5, 30deg);
+    transform: rotate3d(1, 0, -0.5, 0deg);
   }
 
   50% {
-    transform: rotate3d(1, 0, -0.5, 210deg)
+    transform: rotate3d(1, 0, -0.5, 180deg)
   }
 
   100% {
-    transform: rotate3d(1, 0, -0.5, 390deg);
+    transform: rotate3d(1, 0, -0.5, 359deg);
   }
 }
 
