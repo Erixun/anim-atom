@@ -178,7 +178,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(1, 0, 0, 360deg);
+    transform: rotate3d(1, 0, 0, 359deg);
     z-index: 1;
   }
 }
@@ -195,7 +195,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(1, 0, 0, 360deg);
+    transform: rotate3d(1, 0, 0, 359deg);
     z-index: 1;
   }
 }
@@ -215,7 +215,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(1, 0, 0, -360deg)
+    transform: rotate3d(1, 0, 0, -359deg)
   }
 }
 
@@ -229,7 +229,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(1, 0, 0, -360deg)
+    transform: rotate3d(1, 0, 0, -359deg)
   }
 }
 
@@ -248,7 +248,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 359deg);
   }
 }
 
@@ -262,7 +262,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 359deg);
   }
 }
 
@@ -295,7 +295,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(-1, 0, 0.5, 360deg)
+    transform: rotate3d(-1, 0, 0.5, 359deg)
   }
 }
 
@@ -309,7 +309,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(-1, 0, 0.5, 360deg)
+    transform: rotate3d(-1, 0, 0.5, 359deg)
   }
 }
 
@@ -323,7 +323,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(1, 0, -0.5, 360deg);
+    transform: rotate3d(1, 0, -0.5, 359deg);
   }
 }
 
@@ -337,7 +337,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(1, 0, -0.5, 360deg);
+    transform: rotate3d(1, 0, -0.5, 359deg);
   }
 }
 
@@ -358,7 +358,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(0, 1, 0.5, 360deg);
+    transform: rotate3d(0, 1, 0.5, 359deg);
   }
 }
 
@@ -372,7 +372,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(0, 1, 0.5, 360deg);
+    transform: rotate3d(0, 1, 0.5, 359deg);
   }
 }
 
@@ -391,7 +391,7 @@ body {
   }
 
   100% {
-    transform: rotate3d(0, -1, -0.5, 360deg);
+    transform: rotate3d(0, -1, -0.5, 359deg);
   }
 }
 
@@ -405,6 +405,6 @@ body {
   }
 
   100% {
-    transform: rotate3d(0, -1, -0.5, 360deg);
+    transform: rotate3d(0, -1, -0.5, 359deg);
   }
 }
